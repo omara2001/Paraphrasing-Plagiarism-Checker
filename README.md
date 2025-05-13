@@ -21,10 +21,6 @@ A modern, responsive web application that helps students paraphrase text academi
 - Real-time feedback and notifications
 - Copy functionality for easy use of results
 
-## 🚀 Live Demo
-
-Try the application: [Academic Paraphrasing & Plagiarism Checker](https://web-production-8f71.up.railway.app/)
-
 ## 🛠️ Technologies Used
 
 - **HTML5**: Semantic structure and accessibility
