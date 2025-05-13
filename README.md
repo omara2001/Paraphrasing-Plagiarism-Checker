@@ -1,6 +1,6 @@
-# Academic Paraphrasing & Plagiarism Checker - Frontend
+# Academic Paraphrasing & Plagiarism Checker 
 
-![Academic Paraphrasing & Plagiarism Checker](https://i.imgur.com/JKYzXSL.png)
+![Academic Paraphrasing & Plagiarism Checker]
 
 A modern, responsive web application that helps students paraphrase text academically and check for plagiarism using Google's Gemini AI.
 
