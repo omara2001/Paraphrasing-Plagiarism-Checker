@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Paraphrasing & Plagiarism Checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-graduation-cap"></i> Academic Assistant</h1>
+            <p>Paraphrase your text and check for plagiarism</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="paraphrase">
+                <i class="fas fa-sync-alt"></i> Paraphrase
+            </button>
+            <button class="tab-btn" data-tab="plagiarism">
+                <i class="fas fa-search"></i> Plagiarism Check
+            </button>
+        </div>
+
+        <div class="tab-content active" id="paraphrase-tab">
+            <div class="input-container">
+                <h2><i class="fas fa-pencil-alt"></i> Original Text</h2>
+                <textarea id="original-text" placeholder="Paste your text here to paraphrase..."></textarea>
+                <div class="word-count">Words: <span id="original-word-count">0</span></div>
+                <button id="paraphrase-btn" class="action-btn">
+                    <i class="fas fa-magic"></i> Paraphrase
+                </button>
+            </div>
+            
+            <div class="output-container">
+                <h2><i class="fas fa-feather-alt"></i> Paraphrased Text</h2>
+                <div id="loading-paraphrase" class="loading-spinner hidden">
+                    <i class="fas fa-spinner fa-spin"></i> Processing...
+                </div>
+                <div id="paraphrased-text" class="result-box"></div>
+                <div class="word-count">Words: <span id="paraphrased-word-count">0</span></div>
+                <button id="copy-paraphrased" class="secondary-btn">
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+            </div>
+        </div>
+
+        <div class="tab-content" id="plagiarism-tab">
+            <div class="plagiarism-container">
+                <div class="input-group">
+                    <h2><i class="fas fa-file-alt"></i> Original Text</h2>
+                    <textarea id="plagiarism-original" placeholder="Paste the original text here..."></textarea>
+                </div>
+                <div class="input-group">
+                    <h2><i class="fas fa-file-alt"></i> Comparison Text</h2>
+                    <textarea id="plagiarism-comparison" placeholder="Paste the text to check against..."></textarea>
+                </div>
+                <button id="check-plagiarism-btn" class="action-btn">
+                    <i class="fas fa-search"></i> Check Plagiarism
+                </button>
+                
+                <div class="plagiarism-result">
+                    <h2><i class="fas fa-chart-pie"></i> Plagiarism Analysis</h2>
+                    <div id="loading-plagiarism" class="loading-spinner hidden">
+                        <i class="fas fa-spinner fa-spin"></i> Analyzing...
+                    </div>
+                    <div class="result-container">
+                        <div class="score-container">
+                            <div class="score-circle">
+                                <span id="plagiarism-score">0%</span>
+                            </div>
+                            <p>Similarity Score</p>
+                        </div>
+                        <div id="plagiarism-analysis" class="analysis-box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 Academic Assistant | Powered by Gemini AI</p>
+        </footer>
+    </div>
+
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <div class="message">
+                <span class="text text-1">Success</span>
+                <span class="text text-2" id="toast-message"></span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark close"></i>
+        <div class="progress"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
